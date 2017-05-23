@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form class="form-horizontal"  role="form" method="post">
+      <input class="form-control" name="admin_id" id="admin_id" type="text" placeholder="请输入用户名"/>
+      <input class="form-control" name="admin_psd" id="admin_psd" type="password" placeholder="请输入密码"/>
+      <button type="submit" class="btn btn-primary" id="confirm">登录</button>
+    </form>
+    <% if (locals.error) { %>
+        <p><%= error %></p><br>
+    <% } %>
+    <script src="/javascript/jquery-3.1.1.js"></script>
+    <script src="/javascript/index.js"></script>
+  </body>
+</html>
